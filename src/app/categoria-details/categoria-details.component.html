@@ -1,0 +1,12 @@
+<button type="button" (click)="goBack()">go back</button>
+<button type="button" (click)="save()">save</button>
+<div *ngIf="product">
+
+    <h2>{{product.name | uppercase}} Descripción</h2>
+    <div><span>id: </span>{{product.id}}</div>
+    <div>
+      <label for="hero-name">Categoria name: </label>
+      <input id="hero-name" [(ngModel)]="product.name" placeholder="name">
+    </div>
+  
+</div>

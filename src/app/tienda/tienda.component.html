@@ -1,0 +1,22 @@
+<h2>Categorías</h2>
+
+<div>
+  <label for="new-hero">producto name: </label>
+  <input id="new-hero" #productoName />
+
+  <!-- (click) passes input value to add() and then clears the input -->
+  <button type="button" class="add-button" (click)="add(productoName.value); productoName.value=''">
+    Añadir nueva categoria
+  </button>
+</div>
+<br>
+
+<ul class="heroes">
+  <li *ngFor="let product of productos">
+    <a routerLink="/detail/{{product.id}}">
+      <span class="badge">{{product.id}}</span> {{product.name}}
+    </a>
+    <button type="button" class="delete" title="delete hero"
+      (click)="delete(product)">x</button>
+  </li>
+</ul>

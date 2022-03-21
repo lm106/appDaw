@@ -1,0 +1,7 @@
+
+<!--<app-hero-search></app-hero-search>-->
+
+<a *ngFor="let product of productos"
+  routerLink="/detail/{{product.id}}">
+  {{product.name}}
+</a>
